@@ -5,25 +5,25 @@ import matplotlib.pyplot as plt
 
 class Aprox:
     def input(self):
+        """data input"""
         print("введите число точек N")
         N = int(input())
         print("введите массив X")
-        self.x = []
-        for i in range(N):
-            self.x.append(int(input()))
+        self.x = list(map(float, input().split()))
         print("введите массив Y")
-        self.y = []
-        for i in range(N):
-            self.y.append(int(input()))
+        self.y = list(map(float, input().split()))
        
-
     def approx(self):
-        koefs = np.polyfit(self.y, self.x, 5)
+        """aprox func"""
+        print("введите степень полинома")
+        n = int(input())
+        koefs = np.polyfit(self.y, self.x, n)
         self.val = np.polyval(koefs,self.y)
 
     def draw(self):
-        plt.plot(self.y,self.x,'o',label = 'исходные данные')
-        plt.plot(self.y,self.val,'b', label = 'апроксимированные данные')
+        """draw func"""
+        plt.plot(self.x,self.y,'o',label = 'исходные данные')
+        plt.plot(self.val,self.y,'b', label = 'апроксимированные данные')
         plt.grid(True)
         plt.legend()
         plt.show()
