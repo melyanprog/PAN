@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 class Aprox:
     def input(self):
         """data input"""
-        print("введите число точек N")
-        N = int(input())
         print("введите массив X")
         self.x = list(map(float, input().split()))
         print("введите массив Y")
