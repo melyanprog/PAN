@@ -12,7 +12,7 @@ class Aprox:
         self.y = list(map(float, input().split()))
        
     def approx(self):
-        """aprox func"""
+        """approx func"""
         print("введите степень полинома")
         n = int(input())
         koefs = np.polyfit(self.y, self.x, n)
@@ -21,7 +21,7 @@ class Aprox:
     def draw(self):
         """draw func"""
         plt.plot(self.x,self.y,'o',label = 'исходные данные')
-        plt.plot(self.val,self.y,'b', label = 'апроксимированные данные')
+        plt.plot(self.val,self.y,'b', label = 'аппроксимированные данные')
         plt.grid(True)
         plt.legend()
         plt.show()
