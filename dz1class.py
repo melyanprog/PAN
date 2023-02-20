@@ -3,7 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-class Aprox:
+class Approx:
     def input(self):
         """data input"""
         print("введите массив X")
@@ -32,7 +32,7 @@ class Aprox:
         self.draw()
 
     
-ap = Aprox()
+ap = Approx()
 ap.go()
 
 
