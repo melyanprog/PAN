@@ -17,9 +17,14 @@ class Approx:
         n = int(input())
         koefs = np.polyfit(self.y, self.x, n)
         self.val = np.polyval(koefs,self.y)
+        print(koefs)
+        print(self.val)
 
     def draw(self):
         """draw func"""
+        plt.xlabel("X")
+        plt.ylabel("Y")
+        plt.title("Аппроксимация данных")
         plt.plot(self.x,self.y,'o',label = 'исходные данные')
         plt.plot(self.val,self.y,'b', label = 'аппроксимированные данные')
         plt.grid(True)
